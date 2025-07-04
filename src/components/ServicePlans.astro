@@ -1,0 +1,205 @@
+---
+// No se necesitan imports específicos para este componente a menos que uses imágenes o datos dinámicos aquí.
+---
+
+<section id="planes-servicios" class="py-16 bg-gray-50">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold text-gray-800 mb-4">Nuestros Planes de Servicio</h2>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+        Diseñados para adaptarse a las necesidades de cada almacén, desde pequeñas empresas hasta grandes corporaciones, garantizando una gestión de inventario eficiente y sin errores.
+      </p>
+    </div>
+
+    {/* Contenedor de la cuadrícula de planes */}
+    <div class="service-plans-grid"> 
+
+      <div class="service-plan-card bg-white rounded-lg shadow-lg">
+        <h3 class="text-2xl font-bold text-indigo-700 mb-4">Plan Básico</h3>
+        <p class="text-gray-600 mb-6">Ideal para pequeñas empresas que buscan organizar su inventario y probar la plataforma.</p>
+        
+        {/* Contenedor de características */}
+        <div class="features-list-container">
+          <ul class="text-left text-gray-700 space-y-2 mb-6 plan-features-list"> 
+            <li class="flex items-center">
+              <i class="fas fa-check-circle text-green-500 mr-2"></i>
+              Interfaz de usuario intuitiva
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check-circle text-green-500 mr-2"></i>
+              Registro manual de productos
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check-circle text-green-500 mr-2"></i>
+              Reportes básicos de inventario
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check-circle text-green-500 mr-2"></i>
+              Soporte por correo electrónico
+            </li>
+          </ul>
+        </div>
+        <a href="#contact" class="btn secondary-btn plan-button">Más Información</a>
+      </div>
+
+      <div class="service-plan-card bg-indigo-700 text-white rounded-lg shadow-xl featured-plan-card">
+        <h3 class="text-2xl font-bold mb-4">Plan Estándar</h3>
+        <p class="text-indigo-100 mb-6">La solución más popular para la automatización y mejora de la eficiencia.</p>
+        
+        {/* Contenedor de características */}
+        <div class="features-list-container">
+          <ul class="text-left space-y-2 mb-6 plan-features-list">
+            <li class="flex items-center">
+              <i class="fas fa-check-circle text-green-300 mr-2"></i>
+              Todo lo del Plan Básico
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check-circle text-green-300 mr-2"></i>
+              Sistema de cámaras y sensores (hardware incluido)
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check-circle text-green-300 mr-2"></i>
+              Registro automatizado de entradas y salidas en tiempo real
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check-circle text-green-300 mr-2"></i>
+              Precisión mejorada en identificación y conteo
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check-circle text-green-300 mr-2"></i>
+              Acceso a la plataforma web para pedidos y reportes
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check-circle text-green-300 mr-2"></i>
+              Soporte técnico estándar
+            </li>
+          </ul>
+        </div>
+        <a href="#contact" class="btn primary-btn plan-button featured-plan-button">Solicitar Demostración</a>
+      </div>
+
+      <div class="service-plan-card bg-white rounded-lg shadow-lg">
+        <h3 class="text-2xl font-bold text-indigo-700 mb-4">Plan Premium</h3>
+        <p class="text-gray-600 mb-6">La solución completa para grandes almacenes con necesidades avanzadas.</p>
+        
+        {/* Contenedor de características */}
+        <div class="features-list-container">
+          <ul class="text-left text-gray-700 space-y-2 mb-6 plan-features-list">
+            <li class="flex items-center">
+              <i class="fas fa-check-circle text-green-500 mr-2"></i>
+              Todo lo del Plan Estándar
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check-circle text-green-500 mr-2"></i>
+              Integración con sistemas ERP existentes
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check-circle text-green-500 mr-2"></i>
+              Análisis avanzado de datos y predicción de inventario
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check-circle text-green-500 mr-2"></i>
+              Optimización de rutas de picking automatizada
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check-circle text-green-500 mr-2"></i>
+              Soporte prioritario 24/7 y visitas en sitio
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check-circle text-green-500 mr-2"></i>
+              Capacitación personalizada para el personal
+            </li>
+          </ul>
+        </div>
+        <a href="#contact" class="btn secondary-btn plan-button">Contactar Ventas</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Estos estilos son específicos para este componente y se aplicarán de forma scoped.
+     Las clases de utilidad como bg-gray-50, text-white, mb-4, etc., se asume que vienen de main.css.
+  */
+
+  /* Estilos para el contenedor de la cuadrícula de planes */
+  .service-plans-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Una columna por defecto en móvil */
+    gap: 2rem; /* Espacio entre tarjetas */
+    align-items: stretch; /* Crucial para que todas las tarjetas tengan la misma altura */
+  }
+
+  /* Media query para 3 columnas en pantallas medianas y grandes */
+  @media (min-width: 768px) {
+    .service-plans-grid {
+      grid-template-columns: repeat(3, 1fr); /* Tres columnas en pantallas md */
+    }
+  }
+
+  /* Estilos para cada tarjeta de plan */
+  .service-plan-card {
+    display: flex;
+    flex-direction: column; /* Organiza el contenido en columna */
+    align-items: center; /* Centra el contenido horizontalmente (para el título, párrafo, etc.) */
+    text-align: center;
+    padding: 2rem; /* padding: 2rem; para espacio interno */
+    height: 100%; /* La tarjeta ocupa el 100% de la altura de su celda de grid */
+    transition: transform 0.3s ease-in-out; /* Transición para el efecto hover */
+    box-sizing: border-box; /* Asegura que padding no sume al width/height */
+  }
+
+  .service-plan-card:hover {
+    transform: scale(1.05); /* Efecto de escala al pasar el ratón */
+  }
+
+  /* Contenedor de las características de la lista */
+  .features-list-container {
+    flex-grow: 1; /* Permite que este div ocupe el espacio restante */
+    width: 100%; /* Asegura que la lista ocupe todo el ancho disponible */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Alinea las características en la parte superior del espacio disponible */
+    margin-bottom: 1.5rem; /* mb-6 */
+  }
+
+  /* Estilos específicos para la lista de características */
+  .plan-features-list { /* Target the ul with this class */
+    list-style: none; /* Elimina los puntos por defecto de la lista */
+    padding: 0;
+    margin: 0 auto; /* Centra la lista si su max-width es menor que el contenedor */
+    max-width: 280px; /* Asegura que la lista no se extienda demasiado */
+    text-align: left; /* Asegura que el texto de la lista esté a la izquierda */
+    width: 100%; /* Asegura que el ul toma el 100% del espacio disponible hasta max-width */
+  }
+
+  .plan-features-list li {
+    display: flex;
+    align-items: flex-start; /* Alinea ícono y texto al inicio de la línea (arriba), incluso si el texto se envuelve */
+    margin-bottom: 0.75rem; /* Espaciado entre elementos de lista para mejor legibilidad */
+    line-height: 1.4; /* Mejora la legibilidad del texto de la lista */
+  }
+  
+  .plan-features-list li i { /* Icono dentro del elemento de la lista */
+    font-size: 1.6em; /* **Aumentado para que los iconos sean más visibles y no "achicados"** */
+    margin-right: 0.75rem; /* Espacio entre el icono y el texto */
+    flex-shrink: 0; /* Evita que el icono se encoja si el texto es muy largo */
+    margin-top: 0.15em; /* Ajusta la posición vertical del icono para que se alinee mejor con el texto al inicio */
+  }
+
+  /* Estilos para los botones dentro de las tarjetas */
+  .plan-button {
+    margin-top: auto; /* Empuja el botón al final de la tarjeta */
+  }
+
+/* Estilo específico para el botón del Plan Estándar (blanco sobre fondo oscuro) */
+.featured-plan-button {
+  background-color: green; /* Verde */
+
+}
+
+  .featured-plan-button:hover {
+    background-color: var(--light-color); /* Un blanco con toque azulado en hover */
+    color: var(--dark-color); /* Azul marino profundo en hover */
+  }
+</style>

@@ -1,30 +1,62 @@
 ---
+// Si quieres que los puntos problemáticos sean dinámicos, puedes usar props:
+// interface ProblemItem {
+//   iconClass: string; // Por ejemplo, "fas fa-exclamation-triangle"
+//   title: string;
+//   description: string;
+// }
+// interface Props {
+//   heading?: string;
+//   problemPoints?: ProblemItem[];
+//   summary?: string;
+// }
+// const {
+//   heading = "¿Tu Almacén te Cuesta Tiempo y Dinero?",
+//   problemPoints = [
+//     { iconClass: "fas fa-exclamation-triangle", title: "Errores Frecuentes", description: "En el conteo y registro manual de productos." },
+//     { iconClass: "fas fa-hourglass-half", title: "Demoras y Cuellos de Botella", description: "En el seguimiento de entradas y salidas." },
+//     { iconClass: "fas fa-money-bill-wave", title: "Pérdidas Económicas", description: "Por desabastecimiento, exceso de stock, o productos extraviados." },
+//     { iconClass: "fas fa-eye-slash", title: "Falta de Visibilidad", description: "Sin datos en tiempo real del estado de tu inventario." }
+//   ],
+//   summary = "Si te identificas con esto, sabes que la ineficiencia en la gestión de inventarios es un problema real y costoso que afecta directamente tu rentabilidad."
+// } = Astro.props;
 ---
+
 <section id="problema" class="section problem-section">
   <div class="container">
-    <h2>¿Tu Almacén te Cuesta Tiempo y Dinero?</h2>
+    {/* Título de la sección con animación fade-up */}
+    <h2 data-aos="fade-up" data-aos-duration="1000">¿Tu Almacén te Cuesta Tiempo y Dinero?</h2>
+    
     <div class="problem-points">
-      <div class="point-item">
+      {/* Cada 'point-item' con animación fade-up y retardo escalonado */}
+      <div class="point-item" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
         <i class="fas fa-exclamation-triangle"></i>
         <h3>Errores Frecuentes</h3>
         <p>En el conteo y registro manual de productos.</p>
       </div>
-      <div class="point-item">
+      
+      <div class="point-item" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
         <i class="fas fa-hourglass-half"></i>
         <h3>Demoras y Cuellos de Botella</h3>
         <p>En el seguimiento de entradas y salidas.</p>
       </div>
-      <div class="point-item">
+      
+      <div class="point-item" data-aos="fade-up" data-aos-delay="300" data-aos-duration="800">
         <i class="fas fa-money-bill-wave"></i>
         <h3>Pérdidas Económicas</h3>
         <p>Por desabastecimiento, exceso de stock, o productos extraviados.</p>
       </div>
-      <div class="point-item">
+      
+      <div class="point-item" data-aos="fade-up" data-aos-delay="400" data-aos-duration="800">
         <i class="fas fa-eye-slash"></i>
         <h3>Falta de Visibilidad</h3>
         <p>Sin datos en tiempo real del estado de tu inventario.</p>
       </div>
     </div>
-    <p class="problem-summary">Si te identificas con esto, sabes que la ineficiencia en la gestión de inventarios es un problema real y costoso que afecta directamente tu rentabilidad.</p>
+    
+    {/* Párrafo resumen con animación fade-up y un retardo adicional */}
+    <p class="problem-summary" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
+      Si te identificas con esto, sabes que la ineficiencia en la gestión de inventarios es un problema real y costoso que afecta directamente tu rentabilidad.
+    </p>
   </div>
 </section>

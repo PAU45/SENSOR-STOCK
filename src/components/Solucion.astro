@@ -1,9 +1,40 @@
 ---
+// Si quieres que el contenido sea dinámico, puedes usar props:
+// interface Props {
+//   heading?: string;
+//   description?: string;
+//   imageSrc?: string;
+//   imageAlt?: string;
+// }
+// const {
+//   heading = "Sensor Stock: La Visión Artificial al Servicio de tu Inventario.",
+//   description = "Desarrollado por <strong>InovaTech S.A.</strong>, \"Sensor Stock\" es un sistema integral de software y hardware diseñado para revolucionar la gestión de inventarios. Utilizamos tecnología de automatización avanzada para convertir tu almacén en un espacio inteligente y eficiente.",
+//   imageSrc = "/images/sensor-stock-overview.png", // Nota: La ruta correcta debe ser desde 'public/'
+//   imageAlt = "Diagrama o imagen de Sensor Stock"
+// } = Astro.props;
 ---
+
 <section id="solucion" class="section solution-section">
   <div class="container">
-    <h2>Sensor Stock: La Visión Artificial al Servicio de tu Inventario.</h2>
-    <p>Desarrollado por <strong>InovaTech S.A.</strong>, "Sensor Stock" es un sistema integral de software y hardware diseñado para revolucionar la gestión de inventarios. Utilizamos tecnología de automatización avanzada para convertir tu almacén en un espacio inteligente y eficiente.</p>
-    <img src="/src/assets/sensor-stock-overview.png" alt="Diagrama o imagen de Sensor Stock" class="solution-image">
+    {/* Título de la sección con animación fade-up */}
+    <h2 data-aos="fade-up" data-aos-duration="1000">Sensor Stock: La Visión Artificial al Servicio de tu Inventario.</h2>
+    
+    {/* Párrafo de descripción con animación fade-up y un pequeño retardo */}
+    <p data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+      Desarrollado por <strong>InovaTech S.A.</strong>, "Sensor Stock" es un sistema integral de software y hardware diseñado para revolucionar la gestión de inventarios. Utilizamos tecnología de automatización avanzada para convertir tu almacén en un espacio inteligente y eficiente.
+    </p>
+    
+    {/* Imagen de la solución con animación zoom-in y un retardo adicional */}
+    {/* ¡Importante! Asegúrate de que la ruta de la imagen sea correcta.
+        Si la imagen está en `public/images/`, la ruta debe ser `/images/nombre-del-archivo.png`
+        No `/src/assets/` a menos que uses una integración de imágenes de Astro (Image Service) */}
+    <img 
+      src="/logo.png" 
+      alt="Diagrama o imagen de Sensor Stock" 
+      class="solution-image"
+      data-aos="zoom-in" 
+      data-aos-delay="400" 
+      data-aos-duration="1200"
+    >
   </div>
 </section>

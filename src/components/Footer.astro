@@ -1,7 +1,21 @@
 ---
+// Si quieres que el año o el nombre de la empresa sean dinámicos:
+// interface Props {
+//   companyName?: string;
+//   currentYear?: number;
+// }
+// const {
+//   companyName = "InovaTech S.A.",
+//   currentYear = new Date().getFullYear() // Obtiene el año actual automáticamente
+// } = Astro.props;
 ---
-<footer>
+
+<footer data-aos="fade-up" data-aos-duration="1000">
   <div class="container">
+    {/* Contenido del footer */}
     <p>&copy; 2025 InovaTech S.A. Todos los derechos reservados.</p>
+    
+    {/* O si usaras las props dinámicas: */}
+    {/* <p>&copy; {currentYear} {companyName}. Todos los derechos reservados.</p> */}
   </div>
 </footer>

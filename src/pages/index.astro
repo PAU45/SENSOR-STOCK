@@ -1,32 +1,43 @@
 ---
-// Importa los componentes de cada sección
-import Hero from '../components/Hero.astro';
-import Problema from '../components/Problema.astro';
-import Solucion from '../components/Solucion.astro';
-import Caracteristicas from '../components/Caracteristicas.astro';
-import Beneficios from '../components/Beneficios.astro';
-import Target from '../components/Target.astro';
+import BaseLayout from '../layouts/Layout.astro'; // Corregido a Layout.astro según tu estructura
+
+// Importa todas tus secciones
+// Ajusta los nombres de importación para que coincidan con tus nombres de archivo EXACTOS
+import Hero from '../components/Hero.astro'; // Sin subcarpeta 'sections' según tu imagen
+import Problem from '../components/Problema.astro'; // Corregido de 'Problem' a 'Problema'
+import Solution from '../components/Solucion.astro'; // Corregido de 'Solution' a 'Solucion'
+import Features from '../components/Caracteristicas.astro'; // Corregido de 'Features' a 'Caracteristicas'
+import Benefits from '../components/Beneficios.astro'; // Corregido de 'Benefits' a 'Beneficios'
 import AboutUs from '../components/AboutUs.astro';
-import Contacto from '../components/Contacto.astro';
+import TargetAudience from '../components/Target.astro'; // Corregido de 'TargetAudience' a 'Target'
+import Contact from '../components/Contacto.astro'; // Corregido de 'Contact' a 'Contacto'
 import Footer from '../components/Footer.astro';
-import '../styles/main.css';
+import Servicios from '../components/ServicePlans.astro';
+// No veo un 'Welcome.astro' en tu estructura de uso, así que no lo incluyo.
 ---
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sensor Stock: Optimización de Inventarios con Tecnología Avanzada</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <Hero />
-    <Problema />
-    <Solucion />
-    <Caracteristicas />
-    <Beneficios />
-    <Target />
-    <AboutUs />
-    <Contacto />
+
+<BaseLayout title="Sensor Stock - Optimiza tu Inventario con Visión Artificial">
+ 
+    <main>
+        <Hero />
+        <Problem />
+        <Solution />
+        <Features />
+        <Servicios />
+        <Benefits />
+        <AboutUs />
+        <TargetAudience />
+        <Contact />
+    </main>
+
     <Footer />
-  </body>
-</html>
+</BaseLayout>
+
+<style is:global>
+    /* Puedes añadir estilos específicos de la página aquí si es necesario,
+       pero la mayoría debería ir en los archivos CSS importados por main.css */
+    main {
+        /* Para asegurar que el main no tenga márgenes inesperados */
+        margin-top: 0; 
+    }
+</style>

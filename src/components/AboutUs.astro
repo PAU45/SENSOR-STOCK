@@ -1,9 +1,30 @@
 ---
+// Puedes añadir propiedades si quieres que el contenido sea dinámico
+// interface Props {
+//   heading?: string;
+//   paragraph1?: string;
+//   signature?: string;
+// }
+// const {
+//   heading = "InovaTech S.A.: Innovación para el Futuro de tu Negocio.",
+//   paragraph1 = "\"En InovaTech, creemos en el poder de la tecnología para resolver problemas reales. Con Sensor Stock, no solo ofrecemos un producto; ofrecemos una promesa de eficiencia, ahorro y crecimiento. Estamos transformando almacenes, un sensor a la vez.\"",
+//   signature = "— El Equipo de InovaTech S.A."
+// } = Astro.props;
 ---
+
 <section id="about-us" class="section about-us-section">
   <div class="container">
-    <h2>InovaTech S.A.: Innovación para el Futuro de tu Negocio.</h2>
-    <p>"En InovaTech, creemos en el poder de la tecnología para resolver problemas reales. Con Sensor Stock, no solo ofrecemos un producto; ofrecemos una promesa de eficiencia, ahorro y crecimiento. Estamos transformando almacenes, un sensor a la vez."</p>
-    <p class="team-signature">— El Equipo de InovaTech S.A.</p>
+    {/* Título de la sección con efecto fade-up */}
+    <h2 data-aos="fade-up" data-aos-duration="1000">InovaTech S.A.: Innovación para el Futuro de tu Negocio.</h2>
+    
+    {/* Párrafo principal con efecto fade-up y un pequeño retardo */}
+    <p data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+      "En InovaTech, creemos en el poder de la tecnología para resolver problemas reales. Con Sensor Stock, no solo ofrecemos un producto; ofrecemos una promesa de eficiencia, ahorro y crecimiento. Estamos transformando almacenes, un sensor a la vez."
+    </p>
+    
+    {/* Firma del equipo con efecto fade-up y un retardo adicional */}
+    <p class="team-signature" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
+      — El Equipo de InovaTech S.A.
+    </p>
   </div>
 </section>

@@ -1,8 +1,23 @@
 ---
+// Si quieres que el contenido sea dinámico, puedes usar props:
+// interface Props {
+//   heading?: string;
+//   description?: string;
+// }
+// const {
+//   heading = "Ideal Para:",
+//   description = "Empresas de almacenamiento, centros de distribución, minoristas, fabricantes y cualquier negocio que busque transformar su gestión de inventario, reducir costos y aumentar su competitividad. Si buscas eficiencia y control total, Sensor Stock es para ti."
+// } = Astro.props;
 ---
+
 <section id="target" class="section target-section">
   <div class="container">
-    <h2>Ideal Para:</h2>
-    <p>Empresas de almacenamiento, centros de distribución, minoristas, fabricantes y cualquier negocio que busque transformar su gestión de inventario, reducir costos y aumentar su competitividad. Si buscas eficiencia y control total, Sensor Stock es para ti.</p>
+    {/* Título de la sección con animación fade-up */}
+    <h2 data-aos="fade-up" data-aos-duration="1000">Ideal Para:</h2>
+    
+    {/* Párrafo de descripción con animación fade-up y un pequeño retardo */}
+    <p data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+      Empresas de almacenamiento, centros de distribución, minoristas, fabricantes y cualquier negocio que busque transformar su gestión de inventario, reducir costos y aumentar su competitividad. Si buscas eficiencia y control total, Sensor Stock es para ti.
+    </p>
   </div>
 </section>

@@ -1,35 +1,65 @@
 ---
+// Si quieres que las características sean dinámicas, puedes usar props:
+// interface FeatureItem {
+//   iconClass: string; // Por ejemplo, "fas fa-robot"
+//   title: string;
+//   description: string;
+// }
+// interface Props {
+//   heading?: string;
+//   features?: FeatureItem[];
+// }
+// const {
+//   heading = "Lo Que Hace a Sensor Stock Indispensable:",
+//   features = [
+//     { iconClass: "fas fa-robot", title: "Registro Automatizado", description: "Cámaras y sensores identifican y registran entradas y salidas de productos en tiempo real, sin intervención humana." },
+//     { iconClass: "fas fa-bullseye", title: "Precisión Inigualable", description: "Algoritmos de visión artificial garantizan un conteo exacto y minimizan los errores." },
+//     { iconClass: "fas fa-clock", title: "Visibilidad en Tiempo Real", description: "Accede al estado exacto de tu inventario desde cualquier lugar, en cualquier momento." },
+//     { iconClass: "fas fa-truck-loading", title: "Gestión de Pedidos Inteligente", description: "Realiza solicitudes de reabastecimiento directamente desde la plataforma." },
+//     { iconClass: "fas fa-layer-group", title: "Escalable y Adaptable", description: "Compatible con almacenes medianos y grandes, y adaptable a diversos niveles de digitalización." },
+//     { iconClass: "fas fa-brain", title: "Impulsado por IA", description: "Tecnología de vanguardia (Python, OpenCV) para una gestión inteligente." }
+//   ]
+// } = Astro.props;
 ---
+
 <section id="caracteristicas" class="section features-section">
   <div class="container">
-    <h2>Lo Que Hace a Sensor Stock Indispensable:</h2>
+    {/* Título de la sección con animación fade-up */}
+    <h2 data-aos="fade-up" data-aos-duration="1000">Lo Que Hace a Sensor Stock Indispensable:</h2>
+    
     <div class="features-grid">
-      <div class="feature-item">
+      {/* Cada 'feature-item' con animación fade-up y retardo escalonado */}
+      <div class="feature-item" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
         <i class="fas fa-robot"></i>
         <h3>Registro Automatizado</h3>
         <p>Cámaras y sensores identifican y registran entradas y salidas de productos en tiempo real, sin intervención humana.</p>
       </div>
-      <div class="feature-item">
+      
+      <div class="feature-item" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
         <i class="fas fa-bullseye"></i>
         <h3>Precisión Inigualable</h3>
         <p>Algoritmos de visión artificial garantizan un conteo exacto y minimizan los errores.</p>
       </div>
-      <div class="feature-item">
+      
+      <div class="feature-item" data-aos="fade-up" data-aos-delay="300" data-aos-duration="800">
         <i class="fas fa-clock"></i>
         <h3>Visibilidad en Tiempo Real</h3>
         <p>Accede al estado exacto de tu inventario desde cualquier lugar, en cualquier momento.</p>
       </div>
-      <div class="feature-item">
+      
+      <div class="feature-item" data-aos="fade-up" data-aos-delay="400" data-aos-duration="800">
         <i class="fas fa-truck-loading"></i>
         <h3>Gestión de Pedidos Inteligente</h3>
         <p>Realiza solicitudes de reabastecimiento directamente desde la plataforma.</p>
       </div>
-      <div class="feature-item">
+      
+      <div class="feature-item" data-aos="fade-up" data-aos-delay="500" data-aos-duration="800">
         <i class="fas fa-layer-group"></i>
         <h3>Escalable y Adaptable</h3>
         <p>Compatible con almacenes medianos y grandes, y adaptable a diversos niveles de digitalización.</p>
       </div>
-      <div class="feature-item">
+      
+      <div class="feature-item" data-aos="fade-up" data-aos-delay="600" data-aos-duration="800">
         <i class="fas fa-brain"></i>
         <h3>Impulsado por IA</h3>
         <p>Tecnología de vanguardia (Python, OpenCV) para una gestión inteligente.</p>

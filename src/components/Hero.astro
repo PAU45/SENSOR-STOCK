@@ -1,9 +1,52 @@
+---
+// Importa cualquier asset local si lo usaras directamente en el frontmatter o en variables JS
+// import heroBg from '../../public/images/hero-bg.jpg'; // No necesario si la ruta es /images/hero-bg.jpg
 
-<header class="hero-section" style="background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url('/vista-de-almacen-completo-con-carretilla-elevadora.jpg') no-repeat center center/cover;">
+// Puedes definir propiedades si quieres que el contenido sea dinámico desde index.astro
+// interface Props {
+//    title?: string;
+//    subtitle?: string;
+//    description?: string;
+//    ctaText?: string;
+//    ctaLink?: string;
+// }
+// const {
+//    title = "Adiós al Caos en tu Almacén.",
+//    subtitle = "Hola, Eficiencia Inteligente con Sensor Stock.",
+//    description = "Automatiza tu inventario, elimina errores y optimiza tus costos con nuestra tecnología de automatización avanzada.",
+//    ctaText = "Solicita una Demostración Gratuita",
+//    ctaLink = "#contact"
+// } = Astro.props;
+---
+
+<section id="hero" class="hero-section">
   <div class="container">
-    <h1>Adiós al Caos en tu Almacén.</h1>
-    <h2>Hola, Eficiencia Inteligente con Sensor Stock.</h2>
-    <p>Automatiza tu inventario, elimina errores y optimiza tus costos con nuestra tecnología de automatización avanzada.</p>
-    <a href="#contact" class="btn primary-btn">Solicita una Demostración Gratuita</a>
+    {/* Contenedor principal con efecto de zoom-in para toda la sección hero */}
+    <div data-aos="fade-zoom-in" data-aos-duration="1500" data-aos-easing="ease-out-cubic">
+      {/* Título principal con retardo */}
+      <h1 data-aos="fade-up" data-aos-delay="200">Adiós al Caos en tu Almacén.</h1>
+      
+      {/* Subtítulo con retardo un poco mayor */}
+      <h2 data-aos="fade-up" data-aos-delay="400">Hola, Eficiencia Inteligente con Sensor Stock.</h2>
+      
+      {/* Descripción con retardo aún mayor */}
+      <p data-aos="fade-up" data-aos-delay="600">Automatiza tu inventario, elimina errores y optimiza tus costos con nuestra tecnología de automatización avanzada.</p>
+      
+      {/* Botón CTA con el mayor retardo para que aparezca al final */}
+      <a href="#contact" class="btn primary-btn" data-aos="zoom-in" data-aos-delay="900" data-aos-duration="800">
+        Solicita una Demostración Gratuita
+      </a>
+    </div>
   </div>
-</header>
+</section>
+
+<style>
+  /* Aquí puedes definir estilos específicos para este componente si no los tienes en main.css */
+  /* Si ya los tienes en src/styles/layout/_sections.css, no es necesario duplicarlos aquí */
+  .hero-section {
+    /* **LA RUTA DE LA IMAGEN DE FONDO HA SIDO ACTUALIZADA AQUÍ** */
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url('/vista-de-almacen-completo-con-carretilla-elevadora.jpg') no-repeat center center/cover;
+    /* Asegúrate de que el resto de los estilos del hero estén en src/styles/layout/_sections.css */
+    /* ... (otros estilos como color de texto, padding, min-height, display flex, etc.) */
+  }
+</style>

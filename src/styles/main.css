@@ -1,10 +1,14 @@
-/* Variables CSS para personalización */
+/* Variables CSS para personalización - ¡VERDE, AZUL, AZUL MARINO Y BLANCO VIBRANTES! */
 :root {
-  --primary-color: #007bff;
-  --secondary-color: #28a745;
-  --dark-color: #343a40;
-  --light-color: #f8f9fa;
-  --text-color: #495057;
+  --primary-color: #007BFF; /* Azul Brillante - Un azul clásico pero vibrante */
+  --primary-hover-color: #0056b3;
+  --secondary-color: #28A745; /* Verde Esmeralda - Un verde vivo y energizante */
+  --secondary-hover-color: #218838;
+  --dark-color: #001F3F; /* Azul Marino Profundo - Un azul muy oscuro, casi negro */
+  --light-color: #F0F8FF; /* Azul Cielo Muy Claro (AliceBlue) - Un blanco con un toque azulado vibrante */
+  --text-color: #34495E; /* Azul Grisáceo Oscuro - Ideal para texto en fondos claros */
+  --accent-color: #FFC107; /* Amarillo Brillante - Para algún detalle especial o acento */
+
   --heading-font: 'Montserrat', sans-serif;
   --body-font: 'Roboto', sans-serif;
   --border-radius: 8px;
@@ -22,7 +26,7 @@ body {
   font-family: var(--body-font);
   line-height: 1.6;
   color: var(--text-color);
-  background-color: var(--light-color);
+  background-color: var(--light-color); /* Fondo principal azul cielo muy claro */
   scroll-behavior: smooth;
 }
 
@@ -34,7 +38,7 @@ body {
 
 h1, h2, h3 {
   font-family: var(--heading-font);
-  color: var(--dark-color);
+  color: var(--dark-color); /* Encabezados en Azul Marino Profundo */
   margin-bottom: var(--spacing-unit);
   text-align: center;
 }
@@ -60,7 +64,7 @@ p {
 }
 
 a {
-  color: var(--primary-color);
+  color: var(--primary-color); /* Enlaces en Azul Brillante */
   text-decoration: none;
 }
 
@@ -80,33 +84,116 @@ a:hover {
 }
 
 .primary-btn {
-  background-color: var(--primary-color);
+  background-color: var(--primary-color); /* Botón principal en Azul Brillante */
   color: white;
   border: none;
 }
 .primary-btn:hover {
-  background-color: #0056b3;
+  background-color: #0056b3; /* Azul más oscuro al pasar el ratón */
   transform: translateY(-2px);
 }
 
 .secondary-btn {
-  background-color: var(--secondary-color);
+  background-color: var(--secondary-color); /* Botón secundario en Verde Esmeralda */
   color: white;
   border: none;
 }
 .secondary-btn:hover {
-  background-color: #218838;
+  background-color: #218838; /* Verde más oscuro al pasar el ratón */
   transform: translateY(-2px);
 }
+
+/* Clases de utilidad de texto y color (Duplicadas de Tailwind en tu CSS global para Astro) */
+.py-16 { padding-top: 4rem; padding-bottom: 4rem; }
+.bg-gray-50 { background-color: #f9fafb; }
+.bg-indigo-700 { background-color: #4338ca; } /* Un tono de índigo */
+.text-white { color: #fff; }
+.text-gray-800 { color: #1f2937; }
+.text-gray-600 { color: #4b5563; }
+.text-gray-700 { color: #374151; } /* Añadido si no estaba */
+.text-indigo-700 { color: #4338ca; }
+.text-indigo-100 { color: #e0e7ff; }
+.text-green-500 { color: #22c55e; }
+.text-green-300 { color: #86efac; }
+.rounded-lg { border-radius: 0.5rem; }
+.shadow-lg { box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); }
+.shadow-xl { box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
+.mb-4 { margin-bottom: 1rem; }
+.mb-6 { margin-bottom: 1.5rem; }
+.mb-12 { margin-bottom: 3rem; }
+.mr-2 { margin-right: 0.5rem; }
+.mx-auto { margin-left: auto; margin-right: auto; }
+.max-w-2xl { max-width: 42rem; }
+.font-bold { font-weight: 700; }
+.text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+.text-2xl { font-size: 1.5rem; line-height: 2rem; }
+.text-lg { font-size: 1.125rem; line-height: 1.75rem; }
+.space-y-2 > :not([hidden]) ~ :not([hidden]) {
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+}
+.flex { display: flex; }
+.items-center { align-items: center; }
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+
 
 /* Secciones generales */
 .section {
   padding: calc(var(--spacing-unit) * 3) 0;
   text-align: center;
 }
+/* Fondo de secciones pares - ¡alternando con un azul aún más claro para contraste vibrante! */
 .section:nth-child(even) {
-  background-color: #f0f2f5;
+  background-color: #D6E9FF; /* Un Azul Cielo un poco más intenso pero suave */
 }
+
+/* Header (Cabecera) - con colores del logo si es posible, o blanco para visibilidad del logo */
+.main-header {
+    background-color: var(--light-color); /* Fondo blanco con toque azulado */
+    color: var(--dark-color); /* Texto de navegación en azul marino */
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Sombra suave */
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Para responsividad en móviles */
+}
+
+.main-header .logo img {
+    height: 50px; /* Ajusta el tamaño de tu logo */
+    max-width: 180px; /* Para que no sea muy ancho */
+    display: block;
+}
+
+.main-header .main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: calc(var(--spacing-unit) / 1.5);
+    margin: 0;
+    padding: 0;
+}
+
+.main-header .main-nav ul li a {
+    color: var(--dark-color); /* Enlaces de navegación en azul marino */
+    font-weight: bold;
+    font-size: 1.05em;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+    display: block;
+}
+
+.main-header .main-nav ul li a:hover {
+    background-color: var(--primary-color); /* Fondo azul brillante en hover */
+    color: white; /* Texto blanco en hover */
+    text-decoration: none;
+    transform: translateY(-2px);
+}
+
 
 /* Hero Section */
 .hero-section {
@@ -146,7 +233,7 @@ a:hover {
   margin-top: calc(var(--spacing-unit) * 2);
 }
 .problem-section .point-item {
-  background-color: white;
+  background-color: white; /* Mantener blanco para que resalte sobre el fondo de sección */
   border-radius: var(--border-radius);
   padding: var(--spacing-unit);
   box-shadow: 0 4px 15px rgba(0,0,0,0.08);
@@ -167,7 +254,7 @@ a:hover {
 .problem-section .point-item h3 {
   font-size: 1.4em;
   margin-bottom: 0.5em;
-  color: var(--primary-color);
+  color: var(--primary-color); /* Títulos de puntos en Azul Brillante */
 }
 .problem-section .point-item p {
   font-size: 1em;
@@ -197,7 +284,7 @@ a:hover {
   margin-top: calc(var(--spacing-unit) * 2);
 }
 .features-section .feature-item {
-  background-color: white;
+  background-color: white; /* Mantener blanco para que resalte */
   padding: calc(var(--spacing-unit) * 1.5);
   border-radius: var(--border-radius);
   box-shadow: 0 5px 20px rgba(0,0,0,0.1);
@@ -214,7 +301,7 @@ a:hover {
 .features-section .feature-item h3 {
   font-size: 1.6em;
   margin-bottom: 0.5em;
-  color: var(--dark-color);
+  color: var(--dark-color); /* Títulos de características en Azul Marino Profundo */
 }
 .features-section .feature-item p {
   font-size: 1.1em;
@@ -233,7 +320,7 @@ a:hover {
   padding: 0;
 }
 .benefits-section .benefits-list ul li {
-  background-color: white;
+  background-color: white; /* Mantener blanco para que resalte */
   padding: var(--spacing-unit);
   margin-bottom: calc(var(--spacing-unit) / 2);
   border-radius: var(--border-radius);
@@ -242,17 +329,17 @@ a:hover {
   align-items: center;
   font-size: 1.1em;
   line-height: 1.4;
-  color: var(--dark-color);
+  color: var(--dark-color); /* Texto de beneficios en Azul Marino Profundo */
 }
 .benefits-section .benefits-list ul li i {
-  color: var(--secondary-color);
+  color: var(--secondary-color); /* Iconos de beneficios en Verde Esmeralda */
   font-size: 1.5em;
   margin-right: 15px;
 }
 
 /* About Us / Target Section */
 .about-us-section, .target-section {
-  background-color: var(--light-color);
+  background-color: var(--light-color); /* Fondo Azul Cielo muy Claro */
 }
 .about-us-section p {
   max-width: 800px;
@@ -269,8 +356,8 @@ a:hover {
 
 /* Contact Section */
 .contact-section {
-  background-color: var(--dark-color);
-  color: white;
+  background-color: var(--dark-color); /* Fondo en Azul Marino Profundo */
+  color: white; /* Texto blanco para alto contraste */
   padding-bottom: calc(var(--spacing-unit) * 2);
 }
 .contact-section h2 {
@@ -295,6 +382,8 @@ a:hover {
   gap: var(--spacing-unit);
 }
 .contact-section .social-links img {
+  /* Si tus íconos de redes sociales son oscuros, puedes usar un filtro para blanquearlos aquí */
+  /* filter: brightness(0) invert(1); */
   width: 40px;
   height: 40px;
   transition: transform 0.2s;
@@ -305,14 +394,21 @@ a:hover {
 
 /* Footer */
 footer {
-  background-color: #212529;
+  background-color: var(--dark-color); /* Footer en Azul Marino Profundo */
   color: white;
   text-align: center;
   padding: var(--spacing-unit);
   font-size: 0.9em;
 }
 
-/* Media Queries para Responsividad */
+/* Clases para iconos Font Awesome (global) */
+.fas, .fab {
+  display: inline-block;
+  font-size: 1.2em; /* Mantengo el tamaño base aquí, lo ajustamos en el componente si es necesario */
+  vertical-align: middle;
+}
+
+/* Media Queries para Responsividad (sin cambios) */
 @media (max-width: 768px) {
   .hero-section h1 {
     font-size: 2.5em;
@@ -322,6 +418,15 @@ footer {
   }
   h2 {
     font-size: 2em;
+  }
+  .main-header .main-nav ul {
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+      margin-top: 1rem;
+  }
+  .main-header .main-nav ul li a {
+      padding: 0.8rem;
   }
   .problem-section .point-item {
     flex: 1 1 100%;

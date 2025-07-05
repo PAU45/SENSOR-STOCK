@@ -404,7 +404,7 @@ footer {
 /* Clases para iconos Font Awesome (global) */
 .fas, .fab {
   display: inline-block;
-  font-size: 1.2em; /* Mantengo el tamaño base aquí, lo ajustamos en el componente si es necesario */
+  font-size: 100px; /* Mantengo el tamaño base aquí, lo ajustamos en el componente si es necesario */
   vertical-align: middle;
 }
 
